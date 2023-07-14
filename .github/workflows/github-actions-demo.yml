@@ -19,11 +19,13 @@ jobs:
 
   Test:
     runs-on: ubuntu-latest
+    needs: Build
     steps:
       - run : echo "Start testing"
       - run : echo "Test successfull"
 
   Deploy:
+    needs: Test
     runs-on : ubuntu-latest
     steps:
       - run : echo "Start deploy in Production"
