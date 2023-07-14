@@ -23,6 +23,7 @@ jobs:
     steps:
       - run : echo "Start testing"
       - run : echo "Test successfull"
+      - run : exit code 1;
 
   Deploy:
     needs: Test
